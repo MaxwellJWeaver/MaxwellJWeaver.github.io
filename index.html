@@ -456,19 +456,23 @@
 
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+<script>
+  // Year (only if the footer exists)
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Slideshow
-    const slides = document.querySelectorAll(".slideshow .slide");
-    let current = 0;
-    if (slides.length > 1) {
-      setInterval(() => {
-        slides[current].classList.remove("active");
-        current = (current + 1) % slides.length;
-        slides[current].classList.add("active");
-      }, 3500);
-    }
-  </script>
+  // Slideshow
+  const slides = document.querySelectorAll(".slideshow .slide");
+  let current = 0;
+
+  if (slides.length > 1) {
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 3500);
+  }
+</script>
+
 </body>
 </html>
