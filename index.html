@@ -226,14 +226,15 @@
       background: rgba(255,255,255,0.04);
     }
     .slideshow{
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
-}
+      position: relative;
+      width: 100%;
+      height: 260px;     /* <-- add this */
+      aspect-ratio: auto;/* <-- optional */
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+    }
 
 .slideshow .slide{
   position: absolute;
@@ -337,7 +338,7 @@
         Selected CAD work — Previous and current projects.
       </p>
     </div>
-
+    </div>
 
     <div id="projects" class="section">
       <h2>Projects</h2>
