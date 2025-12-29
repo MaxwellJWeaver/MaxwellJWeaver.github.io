@@ -180,4 +180,212 @@
       width: 100%;
       height: 260px;
       object-fit: cover;
-      border-radius: 1
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+    }
+    .fine{
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .section{
+      margin-top: 18px;
+    }
+    .section h2{
+      font-size: var(--h2);
+      margin: 0 0 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap);
+    }
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .proj{
+      padding: 0;
+    }
+    .proj .thumb{
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display:block;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+    }
+    .proj .body{
+      padding: 18px 18px 16px;
+    }
+    .proj h3{
+      margin: 0 0 8px;
+      letter-spacing: -0.015em;
+    }
+    .proj p{ margin: 0 0 12px; color: var(--muted); }
+    .tags{ display:flex; flex-wrap: wrap; gap: 8px; }
+
+    .tag{
+      font-size: 12px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+    }
+
+    .footer{
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      opacity: 0.95;
+    }
+
+    /* Accent gradient text helper */
+    .grad{
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <strong>Maxwell J. Weaver</strong>
+        <span>Aerospace Engineering • San Diego State University</span>
+      </div>
+
+      <div class="nav">
+        <a class="pill" href="#projects">Projects</a>
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <h1><span class="grad">Aerospace Engineering</span> portfolio.</h1>
+        <p class="subtitle">
+          I build and test aerodynamic + flight systems—mixing analysis, CAD, and instrumentation.
+        </p>
+
+        <div>
+          <span class="badge">Aerodynamics</span>
+          <span class="badge">Controls</span>
+          <span class="badge">Experimental Testing</span>
+          <span class="badge">MATLAB / Python</span>
+        </div>
+
+        <div class="cta">
+          <!-- Replace # with real links -->
+          <a class="btn primary" href="assets/Maxwell_Weaver_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+          <a class="btn" href="https://github.com/YOURUSERNAME" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/YOURLINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="mailto:youremail@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="card portrait">
+        <!-- Put a banner or your photo here -->
+        <img src="assets/img/banner.jpg" alt="Banner / project image">
+        <p class="fine">
+          Tip: Use a clean banner image (wind tunnel, CAD render, or flight test photo).
+        </p>
+      </div>
+    </div>
+
+    <div id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="grid">
+
+        <article class="card proj">
+          <img class="thumb" src="assets/img/windtunnel.jpg" alt="Wind tunnel force balance">
+          <div class="body">
+            <h3>Wind Tunnel Force Balance System</h3>
+            <p>
+              Built a force-balance rig with load cells + HX711 amplification to measure lift/drag during AoA sweeps.
+              Produced clean plots and calibration workflow for repeatable testing.
+            </p>
+            <div class="tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">HX711 / Load Cells</span>
+              <span class="tag">MATLAB</span>
+              <span class="tag">Data Viz</span>
+            </div>
+            <div class="cta" style="margin-top:12px;">
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Report</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card proj">
+          <img class="thumb" src="assets/img/vtol.jpg" alt="VTOL tailsitter UAS">
+          <div class="body">
+            <h3>VTOL Tailsitter UAS</h3>
+            <p>
+              Designed a VTOL tailsitter for competition missions (autonomy, waypoint nav, delivery). Focus on configuration,
+              integration, and flight test iteration.
+            </p>
+            <div class="tags">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">Aerodynamics</span>
+              <span class="tag">Flight Test</span>
+              <span class="tag">Systems Integration</span>
+            </div>
+            <div class="cta" style="margin-top:12px;">
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Photos</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Write-up</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div id="about" class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p style="margin:0;">
+          I’m an aerospace engineering undergraduate at SDSU interested in aerodynamics, controls, and experimental testing.
+          I like projects where you can design something, test it, and then iterate using real data.
+        </p>
+      </div>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p style="margin:0; color: var(--muted);">
+          Easiest way to reach me:
+          <a href="mailto:youremail@gmail.com"><span class="grad">youremail@gmail.com</span></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Maxwell J. Weaver</div>
+      <div>Built with GitHub Pages</div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
